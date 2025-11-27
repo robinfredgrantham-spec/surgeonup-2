@@ -1,0 +1,799 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Animation keyframes */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpDelayed {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Animation trigger class */
+.animateOnLoad .mainLandingBody2 p {
+  animation-play-state: running;
+}
+
+.animateOnLoad .mainLandingContainer3 {
+  animation-play-state: running;
+}
+
+/* Pause animations by default */
+.mainLandingBody2 p {
+  animation-play-state: paused;
+}
+
+.mainLandingContainer3 {
+  animation-play-state: paused;
+}
+
+.mainLandingBody,
+.mainLandingBody2 {
+  text-align: center;
+  background-color: #3366FF;
+  color: #3366FF;
+  padding: 18px;
+  height: calc(100vh - 100px);
+  /* Subtract header height */
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainLandingContainer3 {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(0);
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 16.5s;
+  /* Starts when paragraph 4 finishes (12.5s + 4s) */
+}
+
+.mainLandingContainer3 h2 {
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #33FFCC;
+  text-transform: uppercase;
+  margin: 5px 0px;
+}
+
+@media (min-width: 771px) {
+  .mainLandingBody {
+    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
+  }
+
+  .mainLandingBody2 {
+    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
+  }
+
+  .mainLandingContainer {
+    height: 100% !important;
+  }
+
+  .mainLandingContainer2 {
+    height: 92% !important;
+  }
+
+  .mainLandingContainer3 {
+    height: 7% !important;
+  }
+}
+
+@media (min-width: 930px) {
+
+  .mainLandingBody {
+    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
+  }
+
+  .mainLandingBody2 {
+    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
+  }
+
+  .mainLandingContainer {
+    height: 100% !important;
+  }
+
+  .mainLandingContainer2 {
+    height: 92% !important;
+  }
+
+  .mainLandingContainer3 {
+    height: 7% !important;
+  }
+}
+
+/* Large desktop screens */
+@media (min-width: 1200px) {
+
+  .mainLandingBody,
+  .mainLandingBody2 {
+    height: calc(100vh - 135px);
+    min-height: calc(100vh - 135px);
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .mainLandingBody,
+  .mainLandingBody2 {
+    height: calc(100vh - 130px);
+    min-height: calc(100vh - 130px);
+  }
+
+
+  .mainLandingContainer h3 {
+    font-size: 70px !important;
+  }
+
+  .mainLandingContainer h4 {
+    font-size: 55px !important;
+  }
+}
+
+.mainLandingBody2 {
+  text-align: left;
+  padding-top: 0px !important;
+  padding-bottom: 9px;
+}
+
+.mainLandingContainer,
+.mainLandingContainer2 {
+  background-color: #33FFCC;
+  padding: 180px 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.mainLandingContainer {
+  padding: 10px 20px !important;
+}
+
+.mainLandingContainer p {
+  line-height: 1.4;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  position: relative;
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #3366FF;
+  text-align: left;
+  margin-top: 0px !important;
+}
+
+.mainLandingContainer p:nth-child(1) {
+  background-color: #33FFCC;
+  padding: 20px 0px;
+  margin: 0;
+  animation: slideInFromLeft 4s ease-out forwards;
+
+
+  z-index: 1;
+  position: absolute;
+}
+
+.mainLandingContainer p:nth-child(2) {
+  background-color: #33FFCC;
+  padding: 20px 0px;
+  margin: 0;
+  animation: slideInFromTop 4s ease-out forwards;
+
+
+  z-index: 1;
+  position: absolute;
+  transform: translateY(100%) !important;
+}
+
+.mainLandingContainer p:nth-child(3) {
+  background-color: #33FFCC;
+  padding: 20px 0px;
+  margin: 0;
+  animation: slideInFromRight 4s ease-out forwards;
+
+
+  z-index: 1;
+  position: absolute;
+  transform: translateY(200%) !important;
+}
+
+.mainLandingContainer h3 {
+  font-weight: 900;
+  font-size: 88px !important;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.mainLandingContainer h4 {
+  font-size: 65px !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 1.2;
+  margin-top: 55px !important;
+}
+
+.mainLandingContainer h3,
+.mainLandingContainer h4 {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  position: relative;
+  z-index: 0;
+  /* Places h3 and h4 behind paragraph 2 */
+}
+
+/* 1st line: start first at 0.5s, take 5s, finish at 5.5s */
+.mainLandingContainer h3 {
+  animation: fadeUpDelayed 5s ease-out forwards, fadeOut 0.5s ease-out forwards;
+  animation-delay: 0.5s, 18s;
+  /* Hide h3 when paragraph 2 is almost completed (18.5s - 0.5s) */
+}
+
+/* 2nd line: start after h3 finishes at 5.5s, take 5s, finish at 10.5s */
+.mainLandingContainer h4 {
+  animation: fadeUpDelayed 5s ease-out forwards;
+  animation-delay: 5.5s;
+}
+
+/* Paragraph 1: start after h4 finishes at 10.5s, take 4s, finish at 14.5s */
+.mainLandingContainer p:nth-child(1) {
+  animation-delay: 10.5s;
+}
+
+/* Paragraph 2: start after paragraph 1 finishes at 14.5s, take 4s, finish at 18.5s */
+.mainLandingContainer p:nth-child(2) {
+  animation-delay: 14.5s;
+}
+
+/* Individual word styling for desktop */
+.word1,
+.word2,
+.word3,
+.word4,
+.word5,
+.word6,
+.word7 {
+  display: inline;
+  color: #3366FF !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.mainLandingContainer2 {
+  padding: 5px 20px;
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.mainLandingContainer3 {
+  color: white;
+}
+
+.mainLandingBody2 p {
+  margin: 20px 0px;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 4s ease-out forwards;
+}
+
+/* Sequential animation timing for paragraphs */
+.mainLandingBody2 p:nth-child(1) {
+  animation-delay: 0.5s;
+  /* Starts at 0.5s, finishes at 4.5s */
+}
+
+.mainLandingBody2 p:nth-child(2) {
+  animation: slideInFromTop 4s ease-out forwards;
+  animation-delay: 4.5s;
+  /* Starts when paragraph 1 finishes */
+  transform: translateY(-100%);
+}
+
+.mainLandingBody2 p:nth-child(3) {
+  animation: slideInFromRight 4s ease-out forwards;
+  animation-delay: 8.5s;
+  /* Starts when paragraph 2 finishes */
+  transform: translateX(100%);
+}
+
+.mainLandingBody2 p:nth-child(4) {
+  animation: slideInFromBottom 4s ease-out forwards;
+  animation-delay: 12.5s;
+  /* Starts when paragraph 3 finishes */
+  transform: translateY(100%);
+}
+
+.mainLandingBody h3 {
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.mainLandingBody h4 {
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .mainLandingContainer2 {
+    height: 450px;
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 1023px) and (min-width: 769px) {
+  .mainLandingContainer {
+    padding: 10px 30px;
+  }
+
+  .mainLandingContainer h3 {
+    font-size: 48px;
+  }
+
+  .mainLandingContainer h4 {
+    font-size: 38px;
+  }
+
+  .mainLandingContainer2 {
+    padding: 25px 30px;
+    font-size: 22px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  .mainLandingBody,
+  .mainLandingBody2 {
+    padding: 12px;
+    height: calc(100vh - 140px);
+    /* Actual header height: 70px logo + 66px menu + padding */
+    min-height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .mainLandingContainer p:nth-child(2) {
+    left: 15px;
+    right: 15px;
+    padding: 15px;
+    font-size: 18px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 600px) {
+
+  .mainLandingBody,
+  .mainLandingBody2 {
+    height: calc(100vh - 120px);
+    /* Actual header height: 60px logo + 55px menu + padding */
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .mainLandingBody,
+  .mainLandingBody2 {
+    height: calc(100vh - 100px);
+    /* Actual header height: 50px logo + 45px menu + padding */
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 8px;
+  }
+
+  .mainLandingContainer {
+    padding: 10px 15px;
+  }
+
+  .mainLandingContainer2 {
+    padding: 12px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .mainLandingBody,
+  .mainLandingBody2 {
+    height: calc(100vh - 100px);
+    /* Same as 480px - header height doesn't change */
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 6px;
+  }
+
+  .mainLandingContainer {
+    padding: 10px 12px;
+  }
+
+  .mainLandingContainer2 {
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 370px) {
+
+  .mainLandingBody,
+  .mainLandingBody2 {
+    height: calc(100vh - 95px);
+    /* Actual header height: 50px logo + 40px menu + padding */
+    min-height: calc(100vh - 95px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 4px;
+  }
+
+  .mainLandingContainer {
+    padding: 10px 10px;
+  }
+
+  .mainLandingContainer2 {
+    padding: 8px 8px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile container styles */
+@media (max-width: 768px) {
+  .mainLandingContainer {
+    padding: 10px 20px;
+    border-radius: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* Adjust animation timing for mobile - sequential */
+  .mainLandingBody2 p:nth-child(1) {
+    animation-delay: 0.3s;
+    /* Starts at 0.3s, finishes at 4.3s */
+  }
+
+  .mainLandingBody2 p:nth-child(2) {
+    animation-delay: 4.3s;
+    /* Starts when paragraph 1 finishes */
+  }
+
+  .mainLandingBody2 p:nth-child(3) {
+    animation-delay: 8.3s;
+    /* Starts when paragraph 2 finishes */
+  }
+
+  .mainLandingBody2 p:nth-child(4) {
+    animation-delay: 12.3s;
+    /* Starts when paragraph 3 finishes */
+  }
+
+  .mainLandingContainer3 {
+    animation-delay: 16.3s;
+    /* Starts when paragraph 4 finishes */
+  }
+
+
+  .mainLandingContainer h3 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .mainLandingContainer h4 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.3;
+    opacity: 0.9;
+  }
+
+  .mainLandingContainer2 {
+    padding: 15px 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    line-height: 1.4;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  .mainLandingContainer3 {
+    padding: 15px 0;
+  }
+
+  .mainLandingBody2 p {
+    margin: 15px 0px;
+  }
+
+  /* Mobile word styling - each word on new line */
+  .word1,
+  .word2,
+  .word3,
+  .word4,
+  .word5,
+  .word6,
+  .word7 {
+    display: block;
+    width: 100%;
+  }
+
+  /* Individual word sizes for mobile */
+  .word1 {
+    /* SURGEONS */
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    text-transform: capitalize !important;
+  }
+
+  .word2 {
+    /* are */
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .word3 {
+    /* HEROES! */
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+
+  .word4 {
+    /* They */
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 3px;
+    text-transform: lowercase;
+
+  }
+
+  .word5 {
+    /* transform */
+    font-size: 48px;
+    font-weight: 800;
+    font-style: italic !important;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+
+  .word6 {
+    /* people's */
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+
+  }
+
+  .word7 {
+    /* lives. */
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+  }
+
+  .mainLandingContainer3 h2 {
+    font-weight: 900 !important;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+
+  .mainLandingBody,
+  .mainLandingBody2 {
+    padding: 8px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    /* Dynamic viewport height for mobile browsers */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainLandingContainer {
+    flex: 1;
+    padding: 10px 15px;
+    padding-top: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mainLandingContainer h3 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .mainLandingContainer h4 {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.3;
+    opacity: 0.85;
+  }
+
+  .mainLandingContainer2 {
+    padding: 15px 12px;
+    font-size: 16px;
+    border-radius: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+
+  .mainLandingContainer3 {
+    padding: 12px 0;
+  }
+
+  .mainLandingBody2 p {
+    margin: 12px 0px;
+  }
+
+  /* Small mobile word sizes */
+  .word1 {
+    /* SURGEONS */
+    font-size: 54px;
+    margin-bottom: 4px;
+  }
+
+  .word2 {
+    /* are */
+    font-size: 52px;
+    margin-bottom: 4px;
+  }
+
+  .word3 {
+    /* HEROES! */
+    font-size: 64px;
+    margin-bottom: 18px;
+  }
+
+  .word4 {
+    /* They */
+    font-size: 42px;
+    margin-bottom: 2px;
+    text-transform: lowercase;
+    margin-top: 60px;
+
+  }
+
+  .word5 {
+    /* transform */
+    font-size: 48px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    font-style: italic !important;
+  }
+
+  .word6 {
+    /* people's */
+    font-size: 66px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+
+  }
+
+  .word7 {
+    /* lives. */
+    font-size: 110px;
+    text-transform: uppercase;
+
+  }
+
+  .mainLandingContainer3 h2 {
+    font-weight: 900 !important;
+  }
+}
