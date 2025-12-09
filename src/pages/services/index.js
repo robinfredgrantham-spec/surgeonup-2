@@ -7,11 +7,30 @@ import ChartImg from "./images/chart.jpg";
 import LogoSeries from "./images/logoseries.jpg"
 import Services from "@/components/services/services";
 import Footer from "@/components/footer/footer";
+import Link from "next/link";
+import ServicesSections from "@/components/services-section/services-sec";
 
 export default function Service() {
     return (
-      <div className={styles.ServicesMainSection}>
-        <h2>Services</h2>
+    <div className={styles.ServicesMainSection}>
+<div className={styles.ServicesMainSection}>
+  <div className={styles.servicesRow}>
+    <div className={styles.left}></div>
+    <h2 className={styles.center}>Services</h2>
+    <div className={styles.right}>
+      <Link href="/more-services">
+        <Image
+          src="/more-services.png"
+          alt="More services"
+           width={468}
+          height={87}
+          priority
+        />
+      </Link>
+    </div>
+  </div>
+</div>
+<ServicesSections />
         <Container>
           <div className={styles.ServiceMainSec1}>
             <div className={styles.ServiceSec1}>
