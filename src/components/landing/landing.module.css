@@ -108,7 +108,7 @@
   text-align: center;
   background-color: #3366ff;
   color: #3366ff;
-  padding: 18px;
+  padding: 50px 50px 100px 50px;
   height: calc(100vh - 100px);
   /* Subtract header height */
   min-height: calc(100vh - 100px);
@@ -826,7 +826,7 @@
   }
 
   .mainLandingBody2 {
-    padding: 30px;
+    padding: 50px 50px 100px 50px;
   }
 
   .mainLandingBody,
@@ -847,7 +847,7 @@
     min-height: calc(100vh - 123px);
   }
   .mainLandingBody2 {
-    padding: 30;
+    padding: 50px 50px 100px 50px;
   }
 
   .mainLandingContainer h3 {
